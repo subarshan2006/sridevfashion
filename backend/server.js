@@ -45,7 +45,7 @@ app.get("/master", (req, res) => {
 // MongoDB Connection
 // ============================
 mongoose
-  .connect("mongodb://127.0.0.1:27017/userDB", {
+  .connect("mongodb+srv://root:12345@sridev.avbkl1u.mongodb.net/?appName=sridev", {
       useNewUrlParser: true,
       useUnifiedTopology: true,
   })
