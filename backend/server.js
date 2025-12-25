@@ -45,10 +45,7 @@ app.get("/master", (req, res) => {
 // MongoDB Connection
 // ============================
 mongoose
-  .connect("mongodb+srv://root:12345@sridev.avbkl1u.mongodb.net/?appName=sridev", {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-  })
+  .connect("mongodb+srv://root:12345@sridev.avbkl1u.mongodb.net/?appName=sridev")
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log("Mongo Error:", err));
 
