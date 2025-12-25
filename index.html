@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Sri Dev - Fashion design accadamey</title>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="/css/fontawesome.css">
+    <link rel="stylesheet" href="/css/templatemo-scholar.css">
+    <link rel="stylesheet" href="/css/owl.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<!--
+
+TemplateMo 586 Scholar
+
+https://templatemo.com/tm-586-scholar
+
+-->
+  </head>
+
+<style>
+    .slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 300px;
+}
+.row{
+  margin-top: 30px;
+}
+.HeadingH1{
+position: fixed;
+top: auto;
+left: 20px;
+}
+
+.slider {
+    display: flex;
+    width: calc(300px * 13); /* image width × total images */
+    animation: slide 30s linear infinite;
+}
+
+.slider img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-3000px); }
+}
+.contact-section {
+    display: flex;
+    width: 100%;
+    padding: 40px;
+    gap: 30px;
+    background: #f8f8f8;
+}
+
+.contact-left {
+    width: 40%;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.contact-left h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.detail {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.detail .icon {
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+/* Icon Circle */
+.social-links a {
+    text-decoration: none !important; 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+    background-color: #f3e9ff;  /* Light purple background */
+    border: 2px solid #6f42c1;
+
+    color: #6f42c1;             /* Icon color */
+    font-size: 22px;
+
+    transition: all 0.3s ease;
+}
+
+/* Icon visible color */
+.social-links a i {
+    color: #6f42c1;
+    transition: 0.3s ease;
+}
+
+/* Hover Design */
+.social-links a:hover {
+    background-color: #6f42c1;
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(111, 66, 193, 0.4);
+}
+
+/* Icon becomes white on hover */
+.social-links a:hover i {
+    color: #ffffff;
+}
+
+
+
+  
+
+.contact-right {
+    width: 60%;
+    height: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 20px;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .contact-left {
+        width: 100%;
+    }
+
+    .contact-right {
+        width: 100%;
+        height: 300px; /* smaller map on mobile */
+    }
+
+    .contact-left h2 {
+        font-size: 22px;
+    }
+
+    .detail {
+        font-size: 16px;
+    }
+}
+
+/* For very small phones */
+@media (max-width: 480px) {
+    .contact-left {
+        padding: 20px;
+    }
+
+    .contact-right {
+        height: 250px;
+    }
+
+    .detail .icon {
+        font-size: 20px;
+    }
+}
+
+ .text-color-change {
+  animation: textColorChange 5s infinite linear;
+  font-weight: 600;
+}
+
+@keyframes textColorChange {
+  0%   { color: #ff3b30; text-shadow: 0 0 10px #ff3b30; }
+  20%  { color: #ff9500; text-shadow: 0 0 10px #ff9500; }
+  40%  { color: #ffcc00; text-shadow: 0 0 10px #ffcc00; }
+  60%  { color: #34c759; text-shadow: 0 0 10px #34c759; }
+  80%  { color: #007aff; text-shadow: 0 0 10px #007aff; }
+  100% { color: #af52de; text-shadow: 0 0 10px #af52de; }
+}
+
+
+ 
+.bg-color-change {
+  animation: bgColorAnim 5s infinite linear;
+}
+
+@keyframes bgColorAnim {
+  0% {
+    background-color: #ff3b30;
+    box-shadow: 0 0 10px #ff3b30;
+  }
+  20% {
+    background-color: #ff9500;
+    box-shadow: 0 0 10px #ff9500;
+  }
+  40% {
+    background-color: #ffcc00;
+    box-shadow: 0 0 10px #ffcc00;
+  }
+  60% {
+    background-color: #34c759;
+    box-shadow: 0 0 10px #34c759;
+  }
+  80% {
+    background-color: #007aff;
+    box-shadow: 0 0 10px #007aff;
+  }
+  100% {
+    background-color: #af52de;
+    box-shadow: 0 0 10px #af52de;
+  }
+}
+.navbar-nav li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 40px;         /* same as your active item */
+    padding: 0 18px;      /* even spacing left-right */
+
+    font-size: 14px;
+    font-weight: 500;
+
+    border-radius: 6px;   /* optional */
+    text-decoration: none;
+}
+.register-btn {
+    background: #4488e2;
+    border-radius: 25px;
+}
+
+.rainbow-border {
+    position: relative;
+    z-index: 0;
+}
+
+.rainbow-border::before {
+    content: "";
+    position: absolute;
+    inset: -2px; /* border thickness without changing size */
+    z-index: -1;
+    border-radius: inherit;
+
+    background: linear-gradient(
+        90deg,
+        #ff0000,
+        #ff7f00,
+        #ffff00,
+        #00ff00,
+        #0000ff,
+        #4b0082,
+        #8b00ff,
+        #ff0000
+    );
+
+    background-size: 400% 400%;
+    animation: rainbowAnim 6s linear infinite;
+    filter: blur(1.2px); /* soft glow */
+}
+
+@keyframes rainbowAnim {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.about-us {
+      padding: 80px 0;
+    }
+
+    .accordion-button {
+      background: #fff;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      font-weight: 600;
+      padding: 20px;
+    }
+
+    .accordion-button:not(.collapsed) {
+      background: #6a4dfd;
+      color: #fff;
+    }
+
+    .accordion-body {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: -10px;
+      margin-bottom: 20px;
+    }
+
+    .section-heading h6 {
+      color: #6a4dfd;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .section-heading h2 {
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .main-button a {
+      background: #6a4dfd;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+
+    .main-button a:hover {
+      background: #593ae9;
+    }
+
+    .popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* No opacity problem */
+  display: none; /* Initially hidden */
+  z-index: 9999;
+}
+
+/* Popup content */
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  margin: 100px auto;
+  position: relative;
+  animation: popupFade 0.4s ease;
+}
+
+/* Close button */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Center button */
+.btn-center {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.bg-color-change {
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  background: #6f42c1;
+}
+
+/* Fade animation */
+@keyframes popupFade {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+/* ==========================
+   AUTO POPUP (5-second popup)
+   ========================== */
+.auto-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  z-index: 9000; /* lower than course popup */
+}
+
+.auto-popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 450px;
+  margin: 120px auto;
+  position: relative;
+  animation: autoFade 0.4s ease;
+}
+
+.auto-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@keyframes autoFade {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.text-3d-animate {
+    color: #fff;
+
+    /* Animation */
+    animation: colorShift 5s infinite linear;
+}
+
+@keyframes colorShift {
+    /* 0%   { color: #ffffff; }
+    25%  { color: #4b4648; }  /* Pink */
+    /* 50%  { color: #181a1a; }  /* Blue */
+   /*  100% { color: #000000; } */
+
+0%   { color: #ff0000; }   /* Red */
+    14%  { color: #ff7f00; }   /* Orange */
+    28%  { color: #ffff00; }   /* Yellow */
+    42%  { color: #00ff00; }   /* Green */
+    57%  { color: #0000ff; }   /* Blue */
+    71%  { color: #4b0082; }   /* Indigo */
+    85%  { color: #9400d3; }   /* Violet */
+    100% { color: #ff0000; }
+
+}
+
+.text-premium {
+    color: #4B0082; /* deep purple */
+    text-shadow:
+        1px 1px 0px #ffffff,
+        2px 2px 6px rgba(0,0,0,0.25);
+}
+.text-soft-glow {
+    color: #3D007A;
+    text-shadow:
+        0 3px 8px rgba(0,0,0,0.25),
+        0 0 1px rgba(255,255,255,0.8);
+}
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Hide dropdown initially */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: white; /* white background */
+  color: #000000 !important;  
+  min-width: 160px;
+  min-height: fit-content;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 8px 0;
+  z-index: 100;
+}
+
+/* Dropdown items */
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #000000;
+  font-size: 15px;
+}
+
+.course-btn {
+    display: inline-block;
+    padding: 10px 21px;
+    background: linear-gradient(135deg, #000000, #6f42c1);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    margin-top: 1px;
+}
+
+.course-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+.dropdown-content li a:hover {
+  background: #f0f0f0;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Align text for the main button */
+.dropbtn {
+  cursor: pointer;
+}
+/* Default: show desktop items, hide mobile items */
+.desktop-only {
+  display: block;
+}
+.mobile-only {
+  display: none;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;   /* hide desktop dropdown */
+  }
+  .mobile-only {
+    display: block;  /* show direct course links */
+  }
+}
+
+.mode-select {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.mode-select input[type="radio"] {
+  display: none; /* hide default radio */
+}
+
+.mode-select label {
+  padding: 8px 16px;
+  border: 2px solid #ffffff;  /* purple border */
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+/* When radio is selected */
+.mode-select input[type="radio"]:checked + label {
+  background: white;
+  color: #3D007A;
+  box-shadow: 0 3px 8px rgba(164, 76, 255, 0.3);
+  border: 2px solid white;
+}
+
+  </style>
+<body>
+
+
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container" id="index.html">
+        <div class="row" style="margin-top: 30px;">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="#index.html" class="logo">
+                        <h1 class="HeadingH1">Sri Dev Fashion</h1>
+                    </a>
+                    <ul class="nav">
+                      <li class="scroll-to-section"><a href="#index.html" class="active">Home</a></li>
+                      <li class="scroll-to-section"><a href="#services.html">Services</a></li>
+                      <!-- <li class="scroll-to-section"><a href="#courses">Courses</a></li> -->
+                      <!-- <li class="scroll-to-section"><a href="#team">Team</a></li> -->
+                       <li class="dropdown">
+                          <a href="#courses" class="dropbtn" >Courses ▼</a>
+                          <ul class="dropdown-content" >
+                            <li><a href="/basic" style="color: #000000;">Basic</a></li>
+                            <li><a href="/standard" style="color: #000000;">Standard</a></li>
+                            <li><a href="/premium" style="color: #000000;">Premium</a></li>
+                            <li><a href="/master" style="color: #000000;">Master</a></li>
+                          </ul>
+                        </li>
+                          <li class="mobile-only"><a href="/basic">Basic</a></li>
+                          <li class="mobile-only"><a href="/standard">Standard</a></li>
+                          <li class="mobile-only"><a href="/premium">Premium</a></li>
+                          <li class="mobile-only"><a href="/master">Master</a></li>
+                      <li class="scroll-to-section"><a href="#events">Events</a></li>
+                      <li class="scroll-to-section text-color-change"><a  href="#contact"  class="register-btn">Register Now!</a></li>
+                  </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+ <!-- MAIN BANNER -->
+<div class="main-banner" id="top">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+
+        <div class="owl-carousel owl-banner">
+
+          <!-- SLIDE 1 -->
+          <div class="item item-1">
+            <div class="header-text">
+              <h2>SRI DEV Fashion</h2>
+              <h4>Welcome To Our Accadamey</h4>
+            </div>
+          </div>
+
+          <!-- SLIDE 2 -->
+          <div class="item item-2">
+            <div class="header-text">
+              <h2>B Kavitha</h2>
+              <h4>Fashion Designer 12yrs of Experience</h4>
+            </div>
+          </div>
+
+          <!-- SLIDE 3 -->
+          <div class="item item-3">
+            <div class="header-text">
+              <h2>Bhanu </h2>
+              <h4>Fashion Designer 10yrs of Experience</h4>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <!-- service-section -->
+  <div class="services section" id="services.html">
+    <div class="container">
+      <div>
+        <h1 style="color: #6f42c1; text-align: center; margin-bottom: 25px;">Services</h1>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <img src="/images/service-01.png" alt="online degrees">
+            </div>
+            <div class="main-content">
+              <h4>Online Courses</h4>
+              <p>Upgrade your creative career with high-quality online courses in fashion design.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <img src="/images/service-02.png" alt="short courses">
+            </div>
+            <div class="main-content">
+              <h4>Short Courses</h4>
+              <p>A perfect 2-month course designed to help you learn the basics fast and effectively.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="service-item">
+            <div class="icon">
+              <img src="/images/service-03.png" alt="web experts">
+            </div>
+            <div class="main-content">
+              <h4>Long Courses</h4>
+              <p>Gain advanced knowledge and master your craft through our extended 8-month program.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- question frequently ask -->
+  <div class="section about-us">
+    <div class="container">
+      <div class="row">
+
+        <!-- Accordion -->
+        <div class="col-lg-6">
+          <div class="accordion" id="accordionExample">
+
+            <!-- Item 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true">
+                 Which course is best for a fashion designer?
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                 Bachelor of Design (B.Des) in Fashion Design. Bachelor of Arts (BA) in Fashion Design. Bachelor of Fashion Technology (BFTech) Diploma in Fashion Designing. Certificate Courses in Fashion Designing. Integrated Fashion Designing Courses (B.Des + M.Des)
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                 Is fashion design a good career?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Fashion design can be a great, creative, and diverse career if you're passionate, resilient, and business-savvy, but it's highly competitive, demanding long hours and significant dedication, with success often requiring blending artistry with market understanding, networking, and digital skills to stand out in a fast-paced industry. While it offers varied roles (stylist, merchandiser, entrepreneur) and global opportunities, balancing high stress with potential financial rewards requires strategic thinking and strong work ethic, with many suggesting a stable backup or starting with a side hustle. 
+
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                  Is fashion designing easy?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Fashion designing isn't the easiest path, but it's not impossible either. Like any career in the arts, it demands skill, vision, and perseverance.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                  Can a fashion designer earn 1 lakh?
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Yes, absolutely! Fashion designers can earn lakhs per month, particularly after gaining industry experience or launching their own brands. Freelancers often earn ₹1–2 lakhs per project, while senior designers at luxury houses or established fashion labels can earn ₹2–10 lakhs per month.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="col-lg-5 offset-lg-1 align-self-center">
+          <div class="section-heading">
+            <h6>About Us</h6>
+            <h2>What make us the best academy online?</h2>
+            <p>The qualities that make an online academy "the best" generally stem from a combination of high-quality, accredited content, experienced faculty, and a supportive, flexible learning environment. These factors ensure a valuable and effective educational experience for students with diverse needs and goals.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+   <!-- auto-popup render 5 sec -->
+  <div class="auto-popup">
+  <div class="auto-popup-content">
+    <span class="auto-close" onclick="closeAutoPopup()">&times;</span>
+    <h2>Welcome to Sree Dev Fashion!</h2>
+    <p>Join our fashion design courses and unlock your creative potential.</p>
+    <div class="btn-center">
+      <a href="#contact" class="bg-color-change"  onclick="closePop()">Register Now</a>
+    </div>
+  </div>
+</div>
+
+<!-- UNIVERSAL POPUP (Add this before </body>) -->
+
+<!-- <div class="popup" id="popup">
+  <div class="popup-content">
+    <span class="close-button" onclick="closePops()">&times;</span>
+    <h2 id="popup-title"></h2>
+    <p id="popup-text"></p>
+
+    <div class="btn-center">
+      <a href="#contact" class="bg-color-change" onclick="closePops()">Joined Now</a>
+    </div>
+  </div>
+</div> -->
+
+
+ <!-- courses and its details -->
+  <section class="section courses" id="courses" >
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="section-heading">
+            <h6>Latest Courses</h6>
+            <h2>Latest Courses</h2>
+          </div>
+        </div>
+      </div>
+      <ul class="event_filter">
+         <li>
+          <a  href="#!" data-filter="*">All Courses</a>
+        </li> 
+        <li>
+          <a  href="#!" data-filter=".master">8 Months</a>
+        </li>
+        <li>
+          <a href="#!" data-filter=".premium">6 Months</a>
+        </li>
+        <li>
+          <a href="#!" data-filter=".standard">3 Months</a>
+        </li>
+        <li>
+          <a href="#!" data-filter=".basic">2 Months</a>
+        </li>
+      </ul>
+          <h1 style="text-align: center; margin-bottom: 30px;">
+      Opening Offer: <span style="text-decoration: line-through; color:#a0a0a0;"></span> 
+      <span style="color:#d4a017; font-weight: bold;">upto 50 % Discount</span>
+          </h1>
+      <div class="row event_box">
+          <a href="/master">
+          <div class="col-lg-4 col-md-6 align-self-center mb-50 event_outer master">
+  <div class="events_item">
+    <div class="thumb">
+      <img src="/images/course-01.jpg" alt="">
+      <span class="category">Master</span>
+    </div>
+    <div class="down-content">
+      <span class="author">8 Months Courses</span>
+      <h4>learn Master Fashion design</h4>
+
+      <button class="course-btn">
+        Course Details
+      </button>
+    </div>
+  </div>
+</div>
+</a>
+
+        
+        <a href="/premium">
+         <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer premium">
+  <div class="events_item">
+    <div class="thumb">
+      <img src="/images/course-02.jpg" alt="">
+      <span class="category">Premium</span>
+    </div>
+    <div class="down-content">
+      <span class="author">6 Months Courses</span>
+      <h4>learn advance Fashion design</h4>
+
+      <button class="course-btn">
+        Course Details
+      </button>
+    </div>
+  </div>
+</div>
+</a>
+          <a href="/standard">
+         <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer standard">
+  <div class="events_item">
+    <div class="thumb">
+      <img src="/images/course-03.jpg" alt="">
+      <span class="category">Standard</span>
+    </div>
+    <div class="down-content">
+      <span class="author">3 Months Courses</span>
+      <h4>learn trending Fashion design</h4>
+
+      <button class="course-btn">
+        Course Details
+      </button>
+    </div>
+  </div>
+</div>
+</a>
+
+     <a href="/basic">
+        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer basic">
+  <div class="events_item">
+    <div class="thumb">
+      <img src="/images/course-04.jpg" alt="">
+      <span class="category">Basic</span>
+    </div>
+    <div class="down-content">
+      <span class="author">2 Months Courses</span>
+      <h4>Learn Basic Fashion design</h4>
+
+      <button class="course-btn">
+        Course Details
+      </button>
+    </div>
+  </div>
+</div>
+</a>
+
+        <!-- <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 wordpress development">
+          <div class="events_item">
+            <div class="thumb">
+              <a href="#"><img src="/images/course-05.jpg" alt=""></a>
+              <span class="category">Wordpress</span>
+              <span class="price"><h6><em>$</em>320</h6></span>
+            </div>
+            <div class="down-content">
+              <span class="author">Sophia Rose</span>
+              <h4>Be a WordPress Master</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 align-self-center mb-30 event_outer col-md-6 wordpress design">
+          <div class="events_item">
+            <div class="thumb">
+              <a href="#"><img src="/images/course-06.jpg" alt=""></a>
+              <span class="category">Webdesign</span>
+              <span class="price"><h6><em>$</em>240</h6></span>
+            </div>
+            <div class="down-content">
+              <span class="author">David Hutson</span>
+              <h4>Full Stack Developer</h4>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- <div class="popup" id="popup">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <h2 id="popup-title"></h2>
+    <p id="popup-text"></p>
+  </div>
+</div> -->
+
+
+   <!-- Years of experience -->
+  <div class="section fun-facts">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="wrapper">
+            <div class="row">
+              <div class="col-lg-3 col-md-6">
+                <div class="counter">
+                  <h2 class="timer count-title count-number" data-to="150" data-speed="1000"></h2>
+                   <p class="count-text ">Happy Students</p>
+                </div>
+              </div>
+              <!-- <div class="col-lg-3 col-md-6">
+                <div class="counter">
+                  <h2 class="timer count-title count-number" data-to="804" data-speed="1000"></h2>
+                  <p class="count-text ">Course Hours</p>
+                </div>
+              </div> -->
+              <div class="col-lg-3 col-md-6">
+                <div class="counter">
+                  <h2 class="timer count-title count-number" data-to="50" data-speed="1000"></h2>
+                  <p class="count-text ">Employed Students</p>
+                </div>
+              </div>
+              <div class="col-lg-3 col-md-6">
+                <div class="counter end">
+                  <h2 class="timer count-title count-number" data-to="15" data-speed="1000"></h2>
+                  <p class="count-text ">Years Experience</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div style="height: 30px;">
+</div>
+  <!-- testomani -->
+  <div class="section our-story">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- LEFT CONTENT -->
+      <div class="col-lg-5">
+        <div class="section-heading">
+          <h6>OUR STORY</h6>
+          <h2>How Our Journey Began</h2>
+          <p>
+            We started with a simple idea — to build meaningful digital
+            experiences. From small projects to full-scale platforms,
+            our journey has been about learning, growing, and creating
+            value through technology.
+          </p>
+          <p>
+            Today, we specialize in full-stack development, UI/UX design,
+            and scalable web solutions that help businesses move forward.
+          </p>
+        </div>
+      </div>
+      <!-- RIGHT SLIDER -->
+      <div class="col-lg-7">
+        <div class="slider-container">
+          <div class="slider">
+            <img src="../images/imag_01.jpeg" alt="">
+            <img src="../images/imag_02.jpeg" alt="">
+            <img src="../images/imag_03.jpeg" alt="">
+            <img src="../images/imag_04.jpeg" alt="">
+            <img src="../images/imag_05.jpeg" alt="">
+            <img src="../images/imag_06.jpeg" alt="">
+            <img src="../images/imag_07.jpeg" alt="">
+            <img src="../images/imag_08.jpeg" alt="">
+            <img src="../images/imag_09.jpeg" alt="">
+            <img src="../images/imag_10.jpeg" alt="">
+            <img src="../images/imag_11.jpeg" alt="">
+            <img src="../images/imag_12.jpeg" alt="">
+            <img src="../images/imag_13.jpeg" alt="">
+            <img src="../images/imag_14.jpeg" alt="">
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+  <div class="section events" id="events">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="section-heading">
+            <h6>Schedule</h6>
+            <h2>Upcoming Events</h2>
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-6">
+          <div class="item">
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="image">
+                  <img src="/images/event-01.jpg" alt="">
+                </div>
+              </div>
+              <div class="col-lg-9">
+                <ul>
+                  <li>
+                    <span class="category">Web Design</span>
+                    <h4>UI Best Practices</h4>
+                  </li>
+                  <li>
+                    <span>Date:</span>
+                    <h6>16 Feb 2036</h6>
+                  </li>
+                  <li>
+                    <span>Duration:</span>
+                    <h6>22 Hours</h6>
+                  </li>
+                  <li>
+                    <span>Price:</span>
+                    <h6>$120</h6>
+                  </li>
+                </ul>
+                <a href="#"><i class="fa fa-angle-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-6">
+          <div class="item">
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="image">
+                  <img src="/images/event-02.jpg" alt="">
+                </div>
+              </div>
+              <div class="col-lg-9">
+                <ul>
+                  <li>
+                    <span class="category">Front End</span>
+                    <h4>New Design Trend</h4>
+                  </li>
+                  <li>
+                    <span>Date:</span>
+                    <h6>24 Feb 2036</h6>
+                  </li>
+                  <li>
+                    <span>Duration:</span>
+                    <h6>30 Hours</h6>
+                  </li>
+                  <li>
+                    <span>Price:</span>
+                    <h6>$320</h6>
+                  </li>
+                </ul>
+                <a href="#"><i class="fa fa-angle-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12 col-md-6">
+          <div class="item">
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="image">
+                  <img src="/images/event-03.jpg" alt="">
+                </div>
+              </div>
+              <div class="col-lg-9">
+                <ul>
+                  <li>
+                    <span class="category">Full Stack</span>
+                    <h4>Web Programming</h4>
+                  </li>
+                  <li>
+                    <span>Date:</span>
+                    <h6>12 Mar 2036</h6>
+                  </li>
+                  <li>
+                    <span>Duration:</span>
+                    <h6>48 Hours</h6>
+                  </li>
+                  <li>
+                    <span>Price:</span>
+                    <h6>$440</h6>
+                  </li>
+                </ul>
+                <a href="#"><i class="fa fa-angle-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- enqurie form -->
+  <div class="contact-us section" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6  align-self-center">
+          <div class="section-heading">
+            <h6>Contact Us</h6>
+            <h2>Feel free to contact us anytime</h2>
+            <p>Thank you for choosing our fashion design courses. We provide high-quality training and resources completely free of charge. You can support us by sharing our website with others who are interested in fashion design.</p>
+            <div class="special-offer rainbow-border">
+              <span class="offer">Grand<br><em>Offer</em></span>
+              <!-- <h6>Valide: <em>24 April 2036</em></h6> -->
+              <h1 style="color: white;">Students Offer <h3 style="color: white;">20 %</h3> </h1>
+              <a href="#contact"><i class="fa fa-angle-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="contact-us-content">
+            <form id="contact-form" action="/submit" method="POST">
+              <div class="row">
+                <div class="col-lg-12">
+                  <fieldset>
+                    <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <input type="text" name="number" id="number" placeholder="Your Number..." required="">
+                  </fieldset>
+                </div>
+                <div class="col-lg-12">
+                  <fieldset>
+                    <input type="text" name="age" id="age" placeholder="Your Age..." required>
+                  </fieldset>
+                </div>
+                  <div class="mode-select">
+                      <input type="radio" name="mode" id="online" value="online" required>
+                      <label for="online">Online</label>
+
+                      <input type="radio" name="mode" id="offline" value="offline">
+                      <label for="offline">Offline</label>
+                  </div>
+                <!-- <div class="col-lg-12">
+                  <fieldset>
+                    <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                  </fieldset>
+                </div> -->
+                <div class="col-lg-12">
+                  <fieldset>
+                    <button type="submit" id="form-submit" class="orange-button">Send Message Now</button>
+                  </fieldset>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- contact - form -->
+  <section class="contact-section">
+    <div class="contact-left">
+        <h2>Contact Us</h2>
+
+        <div class="detail">
+            <i class="icon">📍</i>
+            <p>2nd Street, Gandhipuram , coimbatore</p>
+        </div>
+
+        <div class="detail">
+            <i class="icon">📞</i>
+            <p>+91 93442 51898</p>
+        </div>
+
+        <div class="detail">
+            <i class="icon">✉️</i>
+            <p>sridev@gmail.com</p>
+        </div>
+
+                <div class="social-links" >
+                    <a href="tel:+91 9344251898"><i class="fa-solid fa-phone"></i></a>
+                    <a href="https://www.instagram.com/sree_star_designer/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.google.com/maps/..."><i class="fa-solid fa-location-dot"></i></a>
+                    <a href="https://wa.me/919344251898"><i class="fa-brands fa-whatsapp"></i></a>
+
+                </div>
+    </div>
+
+    <!-- Right Side Map -->
+    <div class="contact-right">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!4v1765348099656!6m8!1m7!1sGlqaRMCdrUiZgRWRyXRrLA!2m2!1d11.01871041185698!2d76.9686914193356!3f254.65266375547785!4f11.512383142929977!5f0.7820865974627469" 
+            referrerpolicy="no-referrer-when-downgrade"
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>
+</section>
+
+  <footer>
+    <div class="container">
+      <div class="col-lg-12">
+        <p>Copyright © 2025 Scholar Organization. All rights reserved. &nbsp;&nbsp;&nbsp; Design: <a href="https://templatemo.com" rel="nofollow" target="_blank">TemplateMo</a> Distribution: <a href="https://themewagon.com" rel="nofollow" target="_blank">ThemeWagon</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="/jquery/jquery.min.js"></script>
+  <!-- <script src="/bootstrap/js/bootstrap.min.js"></script> -->
+  <script src="/js/isotope.min.js"></script>
+  <script src="/js/owl-carousel.js"></script>
+  <script src="/js/counter.js"></script>
+  <script src="/js/custom.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+document.querySelectorAll(".course-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    
+    const title = btn.getAttribute("data-title");
+    const text = btn.getAttribute("data-text");
+
+    document.getElementById("popup-title").innerText = title;
+    document.getElementById("popup-text").innerText = text;
+
+    document.getElementById("popup").style.display = "block";
+  });
+});
+</script>
+<script>
+function closeAutoPopup() {
+  document.querySelector(".auto-popup").style.display = "none";
+}
+setTimeout(() => {
+  document.querySelector(".auto-popup").style.display = "block";
+}, 5000);
+
+function closePop() {
+  document.querySelector(".auto-popup").style.display = "none";
+}
+
+function goToContact() {
+  // Close popup
+  closePop();
+
+  // Smooth scroll to #contact
+  document.getElementById("contact").scrollIntoView({
+    behavior: "smooth"
+  });
+}
+
+function closePops() {
+  document.getElementById("popup").style.display = "none";
+}
+
+</script>
+  </body>
+</html>

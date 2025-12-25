@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details | Sree Dev Fashion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- CSS VARIABLES (The Violet Theme) --- */
+        :root {
+            --primary-violet: #7c73e6; /* Matches the top banner/icons */
+            --dark-violet: #5f54c9;
+            --light-violet-bg: #f2f0ff; /* The card background color */
+            --accent-blue: #4faaf0;    /* The 'Register Now' button color */
+            --text-dark: #333333;
+            --text-grey: #666666;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--text-dark);
+        }
+
+        /* --- HEADER SECTION (Matches your Screenshot) --- */
+        header {
+            background-color: var(--primary-violet);
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 0 4px 15px rgba(124, 115, 230, 0.3);
+        }
+        .title{
+          font-size: 25px;
+          font-weight: bold;
+        }
+        .logo {
+            color: var(--white);
+            font-weight: 700;
+            font-size: 24px;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--white);
+            font-size: 16px;
+            font-weight: 400;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        .btn-register {
+            background-color: var(--accent-blue);
+            color: var(--white);
+            padding: 10px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .btn-register:hover {
+            transform: translateY(-2px);
+        }
+
+        /* --- MAIN CONTAINER --- */
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        /* --- COURSE TITLE AREA --- */
+        .course-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .course-header h1 {
+            color: var(--dark-violet);
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .course-tag {
+            background-color: var(--light-violet-bg);
+            color: var(--primary-violet);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        /* --- DETAILS GRID LAYOUT --- */
+        .details-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr; /* Content takes 2/3, Sidebar takes 1/3 */
+            gap: 40px;
+        }
+
+        /* Left Side: Content */
+        .course-content {
+            background-color: var(--light-violet-bg);
+            padding: 40px;
+            border-radius: 30px; /* Matches your screenshot card roundness */
+        }
+
+        .section-title {
+            color: var(--dark-violet);
+            font-size: 22px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(124, 115, 230, 0.1);
+            padding-bottom: 10px;
+        }
+
+        .course-description {
+            color: var(--text-grey);
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .curriculum-list {
+            list-style: none;
+        }
+
+        .curriculum-list li {
+            background: var(--white);
+            margin-bottom: 15px;
+            padding: 15px 20px;
+            border-radius: 15px;
+            color: var(--text-dark);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .curriculum-list li::before {
+            content: "✔";
+            color: var(--primary-violet);
+            margin-right: 15px;
+            font-size: 18px;
+        }
+
+        /* Right Side: Sidebar Info Card */
+        .course-sidebar {
+            position: sticky;
+            top: 20px;
+        }
+
+        .info-card {
+            background: var(--white);
+            border: 2px solid var(--light-violet-bg);
+            padding: 30px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(124, 115, 230, 0.1);
+            text-align: center;
+        }
+
+        .price-tag {
+            font-size: 32px;
+            color: var(--primary-violet);
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            color: var(--text-grey);
+            font-size: 14px;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 10px;
+        }
+
+        .info-item span {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .enroll-btn {
+            display: block;
+            width: 100%;
+            background-color: var(--primary-violet);
+            color: var(--white);
+            text-align: center;
+            padding: 15px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            margin-top: 25px;
+            transition: background 0.3s;
+        }
+
+        .enroll-btn:hover {
+            background-color: var(--dark-violet);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+            header {
+                padding: 15px 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+            .nav-links {
+                gap: 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            SREE DEV FASHION
+        </div>
+        <nav class="nav-links">
+            <a href="/">Back To HomePage</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        
+        <div class="course-header">
+            <span class="course-tag">Most Popular</span>
+            <h1>Fashion Design & Illustration</h1>
+            <p>Master the art of sketching and fabric selection.</p>
+        </div>
+
+        <div class="details-grid">
+            
+            <div class="course-content">
+                <h2 class="section-title">About the Course</h2>
+                <p class="course-description">
+                    The Basic Fashion Design Course is designed for beginners who dream of stepping into the world of fashion. This course builds a strong foundation by introducing you to the essential skills, tools, and creative techniques needed to start your journey as a fashion designer.
+                </p>
+
+<h2 class="section-title">What You Will Learn</h2>
+
+<ul class="curriculum-list">
+
+    <!-- MAIN COURSE INTRO -->
+    <li class="title">Introduction to Fashion Designing</li>
+    <li>Introduction to Fashion</li>
+    <li>Kids Wear</li>
+    <li>Trendy Pattern</li>
+    <li>Adult Garments (Maxi)</li>
+    <li>Pattern</li>
+    <li>Neck Design</li>
+    <li>Saree Pre Pleating</li>
+    <li>Aari Embroidery</li>
+
+    <!-- FASHION DESIGNING MODULE -->
+    <li class="title">Fashion Designing Modules</li>
+    <li>Machine Practice</li>
+    <li>Measurement Session</li>
+    <li>Calculation Class</li>
+    <li>Samples</li>
+    <li>Miniatures</li>
+    <li>Nighty</li>
+    <li>Petticoat</li>
+
+    <!-- KIDS WEAR -->
+    <li class="title">Kids Wear</li>
+    <li>Normal Frock</li>
+    <li>Allan Frock</li>
+    <li>A-line Frock</li>
+    <li>A-line One Side Strap</li>
+    <li>Fishcut Model</li>
+    <li>Jumpsuit</li>
+    <li>Threadwork Wear</li>
+    <li>Full Frock</li>
+    <li>3 Layer Frock</li>
+    <li>Skirt & Top</li>
+    <li>Umbrella Frock</li>
+    <li>Pattu Pavadai</li>
+    <li>Circle Frock</li>
+    <li>Semi Circle</li>
+    <li>V-cut Frock</li>
+    <li>Cindrella Frock</li>
+    <li>Kids Lehanga</li>
+    <li>Two Tone Frock</li>
+
+    <!-- PATTERN MAKING -->
+    <li class="title">Pattern & Sewing</li>
+    <li>Pattern Making</li>
+    <li>Fabric Cutting</li>
+    <li>Theory Session</li>
+    <li>Practical Session</li>
+    <li>Inskirt</li>
+    <li>Prill Inskirt</li>
+
+    <!-- TRENDY PATTERN -->
+    <li class="title">Trendy Pattern</li>
+    <li>Normal Kameez</li>
+    <li>Lining Kameez</li>
+    <li>Princess Cut Kameez</li>
+    <li>Front Open Collar Kameez</li>
+    <li>Half Collar Kameez</li>
+    <li>Chinese Collar Kameez</li>
+    <li>Boat Neck with Hole Kameez</li>
+    <li>Pattiyala Pant</li>
+    <li>Panjabi</li>
+    <li>Full Panel Cut Kameez</li>
+    <li>Angarakha</li>
+    <li>New Design Pattern Kameez</li>
+    <li>Gathering Pant</li>
+    <li>Cigarette Pant</li>
+    <li>Straight Pant</li>
+    <li>Palazzo Pant</li>
+    <li>Semi Circle</li>
+    <li>Full Circle</li>
+
+    <!-- ADULT GARMENTS -->
+    <li class="title">Adult Garments (Maxi)</li>
+    <li>Crop Top</li>
+    <li>Skirt</li>
+    <li>Short Frock Model</li>
+    <li>Waist Belt</li>
+    <li>Umbrella</li>
+    <li>Apple Cut</li>
+    <li>Angarakha</li>
+    <li>Anarkali</li>
+    <li>Masakali</li>
+    <li>Full Panel Maxi</li>
+    <li>Full Pleated Maxi</li>
+    <li>High & Low Model Tops</li>
+    <li>Elastic & Without Elastic Model</li>
+    <li>Prill Frock</li>
+
+    <!-- PATTERN EXTRA -->
+    <li class="title">Pattern Models</li>
+    <li>Full Flare with Yoke</li>
+    <li>Princess Cut</li>
+    <li>Hand Kerchief Model</li>
+    <li>Boho Layered</li>
+    <li>Semi Flare</li>
+    <li>Full Over Coat</li>
+    <li>Short Over Coat</li>
+    <li>Fish Cut Model</li>
+
+    <!-- NECK DESIGN -->
+    <li class="title">Neck Design</li>
+    <li>Round Neck</li>
+    <li>V-neck</li>
+    <li>Square Neck</li>
+    <li>Pentagon Neck</li>
+    <li>Collar Neck</li>
+    <li>Scallop Neck</li>
+    <li>Cowl Neck</li>
+    <li>Scoop Neck</li>
+    <li>Halter Neck</li>
+    <li>Closed Neck Line</li>
+    <li>Short Collar Port Neck</li>
+    <li>Star Neck</li>
+    <li>Sweet Heart Neck</li>
+    <li>Sleeveless Halter Neck</li>
+    <li>Backless Neck</li>
+    <li>High Neck</li>
+    <li>Boat Neck</li>
+    <li>Neck Canvas Model</li>
+
+    <!-- PARTY WEAR -->
+    <li class="title">Party Wear</li>
+    <li>Lehanga</li>
+    <li>Layer Gown</li>
+    <li>Bridal Gown</li>
+    <li>Half Saree</li>
+    <li>Saree Converted</li>
+    <li>Gharara</li>
+    <li>Ruffle Frock</li>
+    <li>Mastani</li>
+    <li>Ghgara Choli</li>
+    <li>Sharara</li>
+    <li>Mom & Daughter Combo</li>
+    <li>Double Layer Ruffle Frock</li>
+    <li>Multi Layer Ruffle Frock</li>
+
+    <!-- SKIRTS -->
+    <li class="title">Skirt</li>
+    <li>Pencil Skirt</li>
+    <li>Box Pleated Skirt</li>
+    <li>Full Circle Skirt</li>
+    <li>Half Circle Skirt</li>
+    <li>High & Low Skirt</li>
+    <li>Layer Skirt</li>
+    <li>Pleated Skirt</li>
+
+    <!-- BLOUSE -->
+    <li class="title">Blouse Patterns</li>
+    <li>Normal Blouse</li>
+    <li>Lining Blouse</li>
+    <li>Crosscut Blouse</li>
+    <li>Piping Blouse</li>
+    <li>Princess Blouse</li>
+    <li>Without Patti</li>
+    <li>Boat Neck</li>
+    <li>Key Hole Blouse</li>
+    <li>Normal Kattori</li>
+    <li>Double Kattori</li>
+    <li>Collar Neck</li>
+    <li>Self Collar Neck</li>
+    <li>Flop Neck</li>
+    <li>Knotted Neck</li>
+    <li>Padded Blouse</li>
+
+    <!-- SLEEVE MODEL -->
+    <li class="title">Sleeve Models</li>
+    <li>Normal Sleeve</li>
+    <li>Elbow Sleeve</li>
+    <li>3/4 Sleeve</li>
+    <li>Cap Sleeve</li>
+    <li>Puff Sleeve</li>
+    <li>High Puff Sleeve</li>
+    <li>Frill Sleeve</li>
+    <li>Bell Sleeve</li>
+    <li>Balloon Sleeve</li>
+    <li>Puff with Border</li>
+    <li>Patal Sleeve</li>
+    <li>Plateon Sleeve</li>
+    <li>3/4 Folding with Button Sleeve</li>
+    <li>Pompom Sleeve</li>
+    <li class="title">saree pre pleating</li>
+    <li class="title">aari Embroidery</li>
+
+</ul>
+
+
+            </div>
+
+            <div class="course-sidebar">
+                <div class="info-card">
+                    <span class="price-tag">Offer 20 %</span>
+                    
+                    <div class="info-item">
+                        Duration: <span>8 Months</span>
+                    </div>
+                    <div class="info-item">
+                        Level: <span>Master</span>
+                    </div>
+                    <div class="info-item">
+                        Lectures: <span>240 Sessions</span>
+                    </div>
+                    <div class="info-item">
+                        Language: <span>Tamil</span>
+                    </div>
+
+                    <a href="/#contact" class="enroll-btn">Enroll Now</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
