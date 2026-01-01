@@ -301,7 +301,8 @@ Header Style
   transition: all .5s ease 0s;
 }
 
-/* .header-area {
+
+ .header-area {
   position: absolute;
   background-color: slateblue;
   height: 100px!important;
@@ -314,7 +315,7 @@ Header Style
   -moz-transition: all .5s ease 0s;
   -o-transition: all .5s ease 0s;
   transition: all .5s ease 0s;
-} */
+} 
 
 .header-area .main-nav {
   /* background: transparent; */
@@ -415,7 +416,7 @@ Header Style
   letter-spacing: .25px;
 }
 
-.background-header .main-nav .nav {margin-top: 20px;}
+.background-header .main-nav .nav {margin-top: 0px;}
 
 .background-header .main-nav .nav li {
   height: 80px;
