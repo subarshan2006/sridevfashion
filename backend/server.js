@@ -39,6 +39,9 @@ app.get("/premium", (req, res) => {
 app.get("/master", (req, res) => {
     res.sendFile(path.join(__dirname, "../master.html"));
 });
+app.get("/about", (req, res) => {
+    res.sendFile(path.join(__dirname, "../about.html"));
+});
 
 
 // =============================
