@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sri Dev Fashion Academy</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Georgia", serif;
+}
+:root {
+            --primary-violet: #7c73e6; /* Matches the top banner/icons */
+            --dark-violet: #5f54c9;
+            --light-violet-bg: #f2f0ff; /* The card background color */
+            --accent-blue: #4faaf0;    /* The 'Register Now' button color */
+            --text-dark: #333333;
+            --text-grey: #666666;
+            --white: #ffffff;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--text-dark);
+        }
+
+        /* --- HEADER SECTION (Matches your Screenshot) --- */
+        header {
+            background-color: var(--primary-violet);
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 0 4px 15px rgba(124, 115, 230, 0.3);
+        }
+        .title{
+          font-size: 25px;
+          font-weight: bold;
+        }
+        .logo {
+            color: var(--white);
+            font-weight: 700;
+            font-size: 24px;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--white);
+            font-size: 16px;
+            font-weight: 400;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+body {
+  background: #f5f5f5;
+  color: #222;
+}
+
+.academy {
+  display: flex;
+  justify-content: center;
+  padding: 30px 15px;
+}
+
+.card {
+  background: #fff;
+  max-width: 900px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.image-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.image-box img {
+  width: 260px;
+  border-radius: 8px;
+  border: 4px solid #2f6b3f;
+}
+
+h1 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+
+h3 {
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+p {
+  line-height: 1.7;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.highlight {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f0f7f3;
+  border-left: 5px solid #2f6b3f;
+  border-radius: 5px;
+}
+
+.highlight h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* 📱 MOBILE RESPONSIVE */
+@media (max-width: 600px) {
+  .card {
+    padding: 20px;
+  }
+
+  .image-box img {
+    width: 200px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            SREE DEV FASHION
+        </div>
+        <nav class="nav-links">
+            <a href="/">Back To HomePage</a>
+        </nav>
+    </header>
+
+  <section class="academy">
+    <div class="card">
+
+      <div class="image-box">
+        <!-- Replace image path with your actual image -->
+        <img src="/images/kavitha_banu.jpg" alt="Founders of Sri Dev Fashion Academy">
+      </div>
+
+      <h1>B KAVITHA & M BHANUMATHI</h1>
+      <h3>Founder of SRI DEV FASHION ACADEMY</h3>
+
+      <p>
+        <strong>SRI DEV FASHION ACADEMY</strong> is an emerging centre of excellence
+        in fashion education, located in the heart of Coimbatore. Our academy is
+        committed to transforming passionate individuals into confident,
+        industry-ready fashion professionals.
+      </p>
+
+      <p>
+        At <strong>SRI DEV FASHION ACADEMY</strong>, we believe fashion is not merely
+        a skill—it is a language of self-expression, empowerment, and individuality.
+        Our courses are thoughtfully designed to guide students through every
+        stage of their creative journey, from foundational techniques to advanced
+        couture artistry.
+      </p>
+
+      <p>
+        Built on a foundation of passion and professionalism, our institution
+        offers an inspiring environment where aspiring designers can discover
+        their creative voice and transform their ideas into timeless designs.
+        Every program is crafted with meticulous care, blending classical
+        craftsmanship with contemporary fashion intelligence.
+      </p>
+
+      <div class="highlight">
+        <h2>Our Vision</h2>
+        <p>
+          “To create life-changing opportunities through fashion education and
+          empower every learner to design their own future with dignity and
+          confidence.”
+        </p>
+      </div>
+
+      <div class="highlight">
+        <h2>Our Mission</h2>
+        <p>
+          To provide an accessible, innovative, and supportive learning platform
+          where students can earn after completing the courses, building
+          financial independence and real-time experience during their training
+          period.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <script >
+    // Simple animation on load
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelector(".card").style.opacity = 0;
+  document.querySelector(".card").style.transform = "translateY(20px)";
+
+  setTimeout(() => {
+    document.querySelector(".card").style.transition = "all 0.8s ease";
+    document.querySelector(".card").style.opacity = 1;
+    document.querySelector(".card").style.transform = "translateY(0)";
+  }, 200);
+});
+
+  </script>
+</body>
+</html>
