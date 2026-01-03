@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details | Sree Dev Fashion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- CSS VARIABLES (The Violet Theme) --- */
+        :root {
+            --primary-violet: #7c73e6; /* Matches the top banner/icons */
+            --dark-violet: #5f54c9;
+            --light-violet-bg: #f2f0ff; /* The card background color */
+            --accent-blue: #4faaf0;    /* The 'Register Now' button color */
+            --text-dark: #333333;
+            --text-grey: #666666;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--text-dark);
+        }
+
+        /* --- HEADER SECTION (Matches your Screenshot) --- */
+        header {
+            background-color: var(--primary-violet);
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            box-shadow: 0 4px 15px rgba(124, 115, 230, 0.3);
+        }
+        .title{
+          font-size: 25px;
+          font-weight: bold;
+        }
+        .logo {
+            color: var(--white);
+            font-weight: 700;
+            font-size: 24px;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--white);
+            font-size: 16px;
+            font-weight: 400;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        .btn-register {
+            background-color: var(--accent-blue);
+            color: var(--white);
+            padding: 10px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .btn-register:hover {
+            transform: translateY(-2px);
+        }
+
+        /* --- MAIN CONTAINER --- */
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        /* --- COURSE TITLE AREA --- */
+        .course-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .course-header h1 {
+            color: var(--dark-violet);
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .course-tag {
+            background-color: var(--light-violet-bg);
+            color: var(--primary-violet);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        /* --- DETAILS GRID LAYOUT --- */
+        .details-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr; /* Content takes 2/3, Sidebar takes 1/3 */
+            gap: 40px;
+        }
+
+        /* Left Side: Content */
+        .course-content {
+            background-color: var(--light-violet-bg);
+            padding: 40px;
+            border-radius: 30px; /* Matches your screenshot card roundness */
+        }
+
+        .section-title {
+            color: var(--dark-violet);
+            font-size: 22px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(124, 115, 230, 0.1);
+            padding-bottom: 10px;
+        }
+
+        .course-description {
+            color: var(--text-grey);
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .curriculum-list {
+            list-style: none;
+        }
+
+        .curriculum-list li {
+            background: var(--white);
+            margin-bottom: 15px;
+            padding: 15px 20px;
+            border-radius: 15px;
+            color: var(--text-dark);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .curriculum-list li::before {
+            content: "✔";
+            color: var(--primary-violet);
+            margin-right: 15px;
+            font-size: 18px;
+        }
+
+        /* Right Side: Sidebar Info Card */
+        .course-sidebar {
+            position: sticky;
+            top: 20px;
+        }
+
+        .info-card {
+            background: var(--white);
+            border: 2px solid var(--light-violet-bg);
+            padding: 30px;
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(124, 115, 230, 0.1);
+            text-align: center;
+        }
+
+        .price-tag {
+            font-size: 32px;
+            color: var(--primary-violet);
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            color: var(--text-grey);
+            font-size: 14px;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 10px;
+        }
+
+        .info-item span {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .enroll-btn {
+            display: block;
+            width: 100%;
+            background-color: var(--primary-violet);
+            color: var(--white);
+            text-align: center;
+            padding: 15px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            margin-top: 25px;
+            transition: background 0.3s;
+        }
+
+        .enroll-btn:hover {
+            background-color: var(--dark-violet);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+            header {
+                padding: 15px 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+            .nav-links {
+                gap: 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            SREE DEV FASHION
+        </div>
+        <nav class="nav-links">
+            <a href="/">Back To HomePage</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        
+        <div class="course-header">
+            <span class="course-tag">Most Popular</span>
+            <h1>Fashion Design & Illustration</h1>
+            <p>Master the art of sketching and fabric selection.</p>
+        </div>
+
+        <div class="details-grid">
+            
+            <div class="course-content">
+                <h2 class="section-title">About the Course</h2>
+                <p class="course-description">
+                    The Basic Fashion Design Course is designed for beginners who dream of stepping into the world of fashion. This course builds a strong foundation by introducing you to the essential skills, tools, and creative techniques needed to start your journey as a fashion designer.
+                </p>
+
+                <h2 class="section-title">What we will do</h2>
+
+<div class="curriculum-list">
+
+  <!-- INTRODUCTION -->
+  <div class="list-box">
+    <h3 class="title">Introduction</h3>
+    <ul>
+      <li>Machine Practice</li>
+      <li>Paper Sample</li>
+      <li>Handwork – Hook, Loop</li>
+      <li>Measurement & Calculation</li>
+      <li>Portion</li>
+      <li>Shoulder Portion</li>
+      <li>Hairband and Bow</li>
+    </ul>
+  </div>
+
+  <!-- BLOUSE -->
+  <div class="list-box">
+    <h3 class="title">Blouse</h3>
+    <ul>
+      <li>Lining Blouse</li>
+      <li>Crosscut Blouse</li>
+      <li>Piping Blouse</li>
+      <li>Princess Blouse</li>
+      <li>With Patti</li>
+      <li>Without Patti</li>
+      <li>Boat Neck Blouse</li>
+      <li>Back Neck – 2 Models</li>
+      <li>Canvas Neck Model</li>
+      <li>Katori Blouse with Patti</li>
+      <li>Close Neck Blouse</li>
+      <li>Single Katori Blouse</li>
+      <li>Double Katori Blouse</li>
+      <li>Collar Neck</li>
+      <li>Half Collar</li>
+      <li>Sleeveless Blouse</li>
+    </ul>
+  </div>
+
+  <!-- NECK -->
+  <div class="list-box">
+    <h3 class="title">Neck (Any 5 Models)</h3>
+    <ul>
+      <li>Round Neck</li>
+      <li>Pentagon Neck</li>
+      <li>Square Neck</li>
+      <li>V-Neck</li>
+      <li>Collar Neck</li>
+      <li>Scallop Neck</li>
+      <li>Sweet Heart Neck</li>
+      <li>Sleeveless Halter Neck</li>
+      <li>Backless Neck</li>
+      <li>High Neck</li>
+      <li>Boat Neck</li>
+      <li>Neck Canvas Model</li>
+    </ul>
+  </div>
+
+  <!-- SLEEVE -->
+  <div class="list-box">
+    <h3 class="title">Sleeve</h3>
+    <ul>
+      <li>Short Sleeve</li>
+      <li>Elbow Sleeve</li>
+      <li>3/4 Sleeve</li>
+      <li>Cap Sleeve</li>
+      <li>Puff Sleeve</li>
+      <li>High Puff Sleeve</li>
+      <li>Pleated Sleeve</li>
+      <li>Petal Sleeve</li>
+      <li>Puff with Border Sleeve</li>
+      <li>Pleated Border Sleeve</li>
+    </ul>
+  </div>
+
+</div>
+
+
+
+            <div class="course-sidebar">
+                <div class="info-card">
+                    <span class="price-tag">₹11,999</span>
+                    
+                    <div class="info-item">
+                        Duration: <span>2 Months</span>
+                    </div>
+                    <div class="info-item">
+                        Level: <span>Beginner</span>
+                    </div>
+                    <div class="info-item">
+                        Lectures: <span>60 Sessions</span>
+                    </div>
+                    <div class="info-item">
+                        Language: <span>Tamil</span>
+                    </div>
+
+                    <a href="/#contact" class="enroll-btn">Enroll Now</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
