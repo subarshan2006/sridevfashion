@@ -27,17 +27,26 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../index.html"));
 });
-app.get("/basic", (req, res) => {
+app.get("/basic-tailoring-course", (req, res) => {
     res.sendFile(path.join(__dirname, "../basic.html"));
 });
-app.get("/standard", (req, res) => {
+app.get("/advance-tailoring-course", (req, res) => {
     res.sendFile(path.join(__dirname, "../standard.html"));
 });
-app.get("/premium", (req, res) => {
+app.get("/advance-fashion-design-course", (req, res) => {
     res.sendFile(path.join(__dirname, "../premium.html"));
 });
-app.get("/master", (req, res) => {
+app.get("/profressional-diplomo-fashion-design-course", (req, res) => {
     res.sendFile(path.join(__dirname, "../master.html"));
+});
+app.get("/aari-embroidery-course", (req, res) => {
+    res.sendFile(path.join(__dirname, "../basic_aari.html"));
+});
+app.get("/basic-blouse-course", (req, res) => {
+    res.sendFile(path.join(__dirname, "../basic_blouse.html"));
+});
+app.get("/advance-blouse-course", (req, res) => {
+    res.sendFile(path.join(__dirname, "../advance_blouse.html"));
 });
 app.get("/about", (req, res) => {
     res.sendFile(path.join(__dirname, "../about.html"));
