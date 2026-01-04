@@ -732,6 +732,43 @@ p {
     font-size: 14px;
   }
 }
+/* Dropdown Container */
+#department {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Placeholder / default option */
+#department option[value=""] {
+  color: var(--dark-violet);
+}
+
+/* Hover */
+#department:hover {
+  border-color: var(--dark-violet);
+}
+
+/* Focus */
+#department:focus {
+  border-color: var(--dark-violet);
+  box-shadow: 0 0 0 3px rgba(124, 115, 230, 0.3);
+}
+
+/* Dropdown Options */
+#department option {
+  background-color: #ffffff;
+  color: var(--dark-violet);
+  font-weight: 500;
+}
 
 
   </style>
@@ -1412,41 +1449,62 @@ This boutique is more than a brand—it is 15 years of mastery, brought to life 
         <div class="col-lg-6">
           <div class="contact-us-content">
             <form id="contact-form" action="/submit" method="POST">
-              <div class="row">
-                <div class="col-lg-12">
-                  <fieldset>
-                    <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
-                  </fieldset>
-                </div>
-                <div class="col-lg-12">
-                  <fieldset>
-                    <input type="text" name="number" id="number" placeholder="Your Number..." required="">
-                  </fieldset>
-                </div>
-                <div class="col-lg-12">
-                  <fieldset>
-                    <input type="text" name="age" id="age" placeholder="Your Age..." required>
-                  </fieldset>
-                </div>
-                  <div class="mode-select">
+                  <div class="row">
+
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <input type="text" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
+                      </fieldset>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <input type="text" name="number" id="number" placeholder="Your Number..." required>
+                      </fieldset>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <input type="number" name="age" id="age" placeholder="Your Age..." required>
+                      </fieldset>
+                    </div>
+
+                    <!-- Department Dropdown -->
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <select name="department" id="department" required>
+                          <option value="">Select Course</option>
+                          <option value="Profressional Diplomo Fashion Design Course">8m - Profressional Diplomo Fashion Design Course</option>
+                          <option value="Advance Fashion Design Course">6m - Advance Fashion Design Course</option>
+                          <option value="Basic Tailoring Course">2m - Basic Tailoring Course</option>
+                          <option value="Advance Tailoring Course">3m - Advance Tailoring Course</option>
+                          <option value="Aari Embroidery Course">2m - Aari Embroidery Course</option>
+                          <option value="Basic Blouse Course">2m - Basic Blouse Course</option>
+                          <option value="Advance Blouse Course">3m - Advance Blouse Course</option>
+                          <option value="Kameez Salwar Course">2m - Kameez Salwar Course</option>
+                          <option value="Advance Kameez Salwar Course">3m - Advance Kameez Salwar Course</option>
+                        </select>
+                      </fieldset>
+                    </div>
+
+                    <!-- Mode Selection -->
+                    <div class="mode-select">
                       <input type="radio" name="mode" id="online" value="online" required>
                       <label for="online">Online</label>
 
                       <input type="radio" name="mode" id="offline" value="offline">
                       <label for="offline">Offline</label>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <fieldset>
+                        <button type="submit" id="form-submit" class="orange-button">
+                          Submit
+                        </button>
+                      </fieldset>
+                    </div>
                   </div>
-                <!-- <div class="col-lg-12">
-                  <fieldset>
-                    <textarea name="message" id="message" placeholder="Your Message"></textarea>
-                  </fieldset>
-                </div> -->
-                <div class="col-lg-12">
-                  <fieldset>
-                    <button type="submit" id="form-submit" class="orange-button">Send Message Now</button>
-                  </fieldset>
-                </div>
-              </div>
-            </form>
+                </form>
           </div>
         </div>
       </div>

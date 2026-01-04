@@ -88,25 +88,41 @@ const User = mongoose.model("User", userSchema);
 // Handle Form Submit
 // =============================
 app.post("/submit", async (req, res) => {
-    const { name, number, age, mode } = req.body;
+    const { name, number, age, mode, department } = req.body;
+
     try {
         // Save to MongoDB
-        const user = new User({ name, number, age, mode });
+        const user = new User({
+            name,
+            number,
+            age,
+            mode,
+            department
+        });
+
         await user.save();
+
         // Save to record.txt
         const entry =
-            `Name: ${name}, Number: ${number}, Age: ${age}, Mode: ${mode}, Date: ${new Date().toLocaleString()}\n`;
+            `Name: ${name}, Number: ${number}, Age: ${age}, Course: ${department}, Mode: ${mode}, Date: ${new Date().toLocaleString()}\n`;
 
-        fs.appendFile(path.join(__dirname, "record.txt"), entry, (err) => {
-            if (err) console.log("File write error:", err);
-        });
+        fs.appendFile(
+            path.join(__dirname, "record.txt"),
+            entry,
+            (err) => {
+                if (err) console.log("File write error:", err);
+            }
+        );
+
         // Send success page
         res.sendFile(path.join(__dirname, "..", "success.html"));
+
     } catch (error) {
         console.log("Error:", error);
         res.status(500).send("Error saving data");
     }
 });
+
 
 // app.get("/submit", (req, res) => {
 //     res.sendFile(path.join(__dirname, "../success.html"));
