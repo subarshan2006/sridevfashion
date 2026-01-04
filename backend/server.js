@@ -48,6 +48,12 @@ app.get("/basic-blouse-course", (req, res) => {
 app.get("/advance-blouse-course", (req, res) => {
     res.sendFile(path.join(__dirname, "../advance_blouse.html"));
 });
+app.get("/kameez-salwar-course", (req, res) => {
+    res.sendFile(path.join(__dirname, "../kameez_salwar.html"));
+});
+app.get("/advance-kameez-salwar-course", (req, res) => {
+    res.sendFile(path.join(__dirname, "../advance_kameez.html"));
+});
 app.get("/about", (req, res) => {
     res.sendFile(path.join(__dirname, "../about.html"));
 });
