@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course Details | Sree Dev Fashion</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* --- CSS VARIABLES (The Violet Theme) --- */
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<style>
+    /* --- CSS VARIABLES (The Violet Theme) --- */
         :root {
             --primary-violet: #7c73e6; /* Matches the top banner/icons */
             --dark-violet: #5f54c9;
@@ -238,8 +240,54 @@
                 font-size: 14px;
             }
         }
-    </style>
-</head>
+        /* Price Section Enhancement */
+.price-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+/* Old crossed price */
+.old-price {
+  font-size: 16px;
+  color: var(--text-grey);
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+/* 50% OFF small badge */
+.discount-badge {
+  background: linear-gradient(
+    135deg,
+    var(--primary-violet),
+    var(--dark-violet)
+  );
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+
+/* New offer price */
+.offer-price {
+  font-size: 36px;        /* Bigger = more focus */
+  color: var(--dark-violet);
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+/* Offer note */
+.price-note {
+  font-size: 13px;
+  color: var(--primary-violet);
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+</style>
 <body>
 
     <header>
@@ -345,12 +393,18 @@
   </div>
 
 </div>
-
-
+</div>
 
             <div class="course-sidebar">
                 <div class="info-card">
-                    <span class="price-tag">₹12,499</span>
+                   <div class="price-wrapper">
+                    <span class="old-price">₹25,000</span>
+                    <span class="discount-badge">50% OFF</span>
+                    </div>
+
+                    <span class="price-tag offer-price">₹12,499</span>
+                    <p class="price-note">Limited Time Only</p>
+
                     
                     <div class="info-item">
                         Duration: <span>3 Months</span>
